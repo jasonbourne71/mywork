@@ -1,0 +1,20 @@
+Python packages
+
+easy_install
+networkX
+numpy
+pypng (png)
+freetype-py
+matplotlib
+
+Python3 packages
+
+easy_install
+networkx
+cython
+numpy
+pypng (png)
+freetype-py
+
+issue
+matplotlib says png and freetype

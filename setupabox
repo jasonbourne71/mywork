@@ -1,5 +1,6 @@
 install debian
 	encrypted lvm
+	
 add extra swap
 	dd if=/dev/zero of=/root/myswapfile bs=1M count=32758 #32 GB
 	chmod 600 /root/myswapfile
@@ -21,8 +22,25 @@ install sudo (as root)
 	#CTRL+X; y; [ENTER]
 	exit from root, test sudo command to verify
 	
+install wifi driver
+	find the .tgz for Intel Centrino Ultimate-N 6300
+	unzip
+	cat readme
+	find the install instructions
+	it's a one liner; sudo
+	
 install tripwire
-install opera
+	sudo apt-get update
+	sudo apt-get install tripwire
+	
+install opera (su root)
+	sudo vi /etc/apt/sources.list
+	deb http://deb.opera.com/opera stable non-free #add this line
+	aptitude update
+	wget -O - http://deb.opera.com/archive.key | apt-key add -
+	aptitude update
+	aptitude install opera
+	
 install vivaldi
 install vm workstation player
 set up python

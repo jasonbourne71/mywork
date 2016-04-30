@@ -49,4 +49,10 @@ install vivaldi
 	#i didn't do it this round
 	
 install vm workstation player
-set up python
+	chmod a+x VMware-Player-SOMETHING.bundle
+	sudo ./VMware-Player-SOMETHING.bundle
+	#maybe i can do this first:
+	sudo apt-get install build-essential
+	sudo apt-get install linux-headers-$(uname -r)
+	
+download/set up VMs

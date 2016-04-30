@@ -55,4 +55,7 @@ install vm workstation player
 	sudo apt-get install build-essential
 	sudo apt-get install linux-headers-$(uname -r)
 	
+install 7zip
+	sudo apt-get install p7zip-full
+	
 download/set up VMs

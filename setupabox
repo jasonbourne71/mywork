@@ -40,7 +40,13 @@ install opera (su root)
 	wget -O - http://deb.opera.com/archive.key | apt-key add -
 	aptitude update
 	aptitude install opera
+	#first time got me an out of date version
+	sudo aptitude install libqt3-mt #maybe don't have to do this
+	sudo apt-get install opera-stable
+	#be sure to remove the launcher for iceweasel
 	
 install vivaldi
+	#i didn't do it this round
+	
 install vm workstation player
 set up python

@@ -49,6 +49,7 @@ install vivaldi
 	#i didn't do it this round
 	
 install vm workstation player
+	#download it first
 	chmod a+x VMware-Player-SOMETHING.bundle
 	sudo ./VMware-Player-SOMETHING.bundle
 	#maybe i can do this first:
@@ -57,5 +58,13 @@ install vm workstation player
 	
 install 7zip
 	sudo apt-get install p7zip-full
-	
+
+install virtualbox
+	vi /etc/apt/sources.list
+	deb http://download.virtualbox.org/virtualbox/debian jessie contrib #add this line
+	wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+	wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+	sudo apt-get update
+	sudo apt-get install virtualbox-5.0
+	sudo apt-get install dkms
 download/set up VMs

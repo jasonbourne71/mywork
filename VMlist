@@ -2,7 +2,7 @@ VMLIST!!!
 
 www.osboxes.org
 
-Kali Linux 2.0
+Kali Linux 2.0 # failed
 	root
 	osboxes.org
 
@@ -14,14 +14,14 @@ openSUSE 42.1 Leap
 	osboxes
 	osboxes.org
 	
-CentOS
+CentOS # failed
 	osboxes
 	osboxes.com
 	
 	root
 	osboxes.org
 	
-Debian
+Debian #failed
 	osboxes
 	osboxes.org
 	

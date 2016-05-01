@@ -67,4 +67,15 @@ install virtualbox
 	sudo apt-get update
 	sudo apt-get install virtualbox-5.0
 	sudo apt-get install dkms
+	
 download/set up VMs
+	follow the rules bro
+	
+install wine
+	sudo dpkg --add-architecture i386
+	wget https://dl.winehq.org/wine-builds/Release.key	#download if it doesn't resolve host name
+	sudo apt-key add Release.key
+	sudo vi /etc/apt/sources.list
+	deb https://dl.winehq.org/wine-builds/debian/ DISTRO main
+	sudo apt-get update
+	sudo apt-get install winehq-devel

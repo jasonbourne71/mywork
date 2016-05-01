@@ -1,8 +1,8 @@
-VMLIST!!!
-
+VMLIST for VMware Workstation
+#sudo chown -R username:group directory #when unzipping leaves everything owned by root
 www.osboxes.org
 
-Kali Linux 2.0 # failed
+Kali Linux 2.0
 	root
 	osboxes.org
 
@@ -14,16 +14,9 @@ openSUSE 42.1 Leap
 	osboxes
 	osboxes.org
 	
-CentOS # failed
+CentOS
 	osboxes
 	osboxes.com
-	
-	root
-	osboxes.org
-	
-Debian #failed
-	osboxes
-	osboxes.org
 	
 	root
 	osboxes.org
@@ -33,3 +26,9 @@ Ubuntu
 	osboxes.org
 	
 puppy
+
+VirtualBox
+
+Kali 2016.1
+	root
+	osboxes.org

@@ -79,3 +79,11 @@ install wine
 	deb https://dl.winehq.org/wine-builds/debian/ DISTRO main
 	sudo apt-get update
 	sudo apt-get install winehq-devel
+
+firewall
+	sudo apt-get install ufw
+	sudo ufw default deny
+	sudo ufw enable
+	sudo ufw status verbose
+	
+	

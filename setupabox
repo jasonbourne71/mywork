@@ -45,6 +45,10 @@ install opera (su root)
 	sudo apt-get install opera-stable
 	#be sure to remove the launcher for iceweasel
 	
+	#add developer version
+	sudo vi /etc/apt/sources.list
+	deb http://deb.opera.com/opera developer non-free
+	
 install vivaldi
 	#i didn't do it this round
 	

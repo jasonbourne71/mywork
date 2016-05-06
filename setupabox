@@ -29,12 +29,46 @@ install wifi driver
 	find the install instructions
 	it's a one liner; sudo
 	
-install tripwire
+install tripwire ###https://www.digitalocean.com/community/tutorials/how-to-use-tripwire-to-detect-server-intrusions-on-an-ubuntu-vps
+	FOLLOW THE LINK IF IT'S STILL AVAILABLE
 	sudo apt-get update
 	sudo apt-get install tripwire
 	#configure
 	sudo twadmin --create-polfile /etc/tripwire/twpol.txt
 	sudo tripwire --init
+	sudo sh -c 'tripwire --check | grep Filename > test_results'
+	less /etc/tripwire/test_results
+	
+	sudo nano /etc/tripwire/twpol.txt
+	
+	********************
+Configure the Policy File to Match Your System
+Now that we have a list of files that are setting off tripwire, we can go through our policy file and edit it to 
+get rid of these false positives.
+Open the plain text policy in your editor with root privileges:
+sudo nano /etc/tripwire/twpol.txt
+Do a search for each of the files that were returned in the test_results file. Comment out all of the lines that 
+you find that match.
+In the "Boot Scripts" section, you should comment out the /etc/rc.boot line, since this isn't present in an Ubuntu system:
+(
+  rulename = "Boot Scripts",
+  severity = $(SIG_HI)
+)
+{
+        /etc/init.d             -> $(SEC_BIN) ;
+        #/etc/rc.boot            -> $(SEC_BIN) ;
+        /etc/rcS.d              -> $(SEC_BIN) ;
+There were a lot of files in the /root home directory that needed to be commented out on my system. Anything that 
+is not present on your system should be commented out.
+	********************
+	
+	sudo twadmin -m P /etc/tripwire/twpol.txt
+	sudo tripwire --init
+	#once it all works
+	sudo tripwire --check
+	sudo rm /etc/tripwire/test_results
+	sudo sh -c 'twadmin --print-polfile > /etc/tripwire/twpol.txt'
+	sudo tripwire --check --interactive
 	
 install opera (su root)
 	sudo vi /etc/apt/sources.list

@@ -32,6 +32,9 @@ install wifi driver
 install tripwire
 	sudo apt-get update
 	sudo apt-get install tripwire
+	#configure
+	sudo twadmin --create-polfile /etc/tripwire/twpol.txt
+	sudo tripwire --init
 	
 install opera (su root)
 	sudo vi /etc/apt/sources.list

@@ -132,3 +132,8 @@ bluetooth module
 	add:
 	service bluetooth stop
 	#this should keep bluetooth from starting
+	
+sublime_text
+	#download
+	sudo tar xvjf sublime_text_3_build_3103_x64.tar.bz2
+	

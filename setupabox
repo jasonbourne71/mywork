@@ -137,3 +137,7 @@ sublime_text
 	#download
 	sudo tar xvjf sublime_text_3_build_3103_x64.tar.bz2
 	
+gparted
+	sudo apt-get install gparted
+	
+	

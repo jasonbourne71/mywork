@@ -126,4 +126,9 @@ firewall
 	sudo ufw enable
 	sudo ufw status verbose
 	
+bluetooth module
+	sudo vi /etc/rc.local
 	
+	add:
+	service bluetooth stop
+	#this should keep bluetooth from starting

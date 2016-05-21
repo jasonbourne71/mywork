@@ -140,4 +140,8 @@ sublime_text
 gparted
 	sudo apt-get install gparted
 	
-	
+vim
+	sudo apt-get install vim
+
+bash-docs
+	sudo apt-get install bash-docs
